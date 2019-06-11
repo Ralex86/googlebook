@@ -18,7 +18,7 @@ type Props = {
 class Author extends React.Component<Props> {
   renderList = (authors: Array<AuthorType>) => {
     return (
-      <List>
+      <AuthorStyled>
         <FlatList
           data={authors}
           renderItem={({item}) => {
@@ -30,7 +30,7 @@ class Author extends React.Component<Props> {
           }}
           keyExtractor={({id}) => id}
         />
-      </List>
+      </AuthorStyled>
     );
   };
 
@@ -42,7 +42,7 @@ class Author extends React.Component<Props> {
   }
 }
 
-const List = styled.View`
+const AuthorStyled = styled.View`
   height: 200px;
   border: 1px solid red;
 `;
